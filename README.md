@@ -24,7 +24,7 @@ Due to the manageable size of features, our primary models are gradient boosting
 
 Our experiments led to various findings:
 
-- Enhanced feature engineering, significantly improved model accuracy.
+- Enhanced feature engineering significantly improved model accuracy.
 - XGBoost models were faster but generally exhibited higher loss compared to CatBoost models, which performed better in noisy data conditions.
 - An ensemble approach, combining CatBoost and XGBoost, yielded the best results.
 
