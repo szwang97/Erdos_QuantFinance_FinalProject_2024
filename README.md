@@ -8,13 +8,15 @@ This project is part of the Kaggle competition hosted by Optiver, focusing on pr
 
 The primary objective is to predict the 60-second future movement of a stock's wap, relative to the synthetic index movement. The prediction targets are calculated as follows:
 
-\[ \text{Target} = \left( \frac{\text{StockWAP}_{t+60}}{\text{StockWAP}_t} \right) - \left( \frac{\text{IndexWAP}_{t+60}}{\text{IndexWAP}_t} \right) \]
+$$
+Target = \left( \frac{StockWAP_{t+60}}{StockWAP_t} \right) - \left( \frac{IndexWAP_{t+60}}{IndexWAP_t} \right)
+$$
 
 Submissions are evaluated based on the Mean Absolute Error (MAE) between the predicted and observed movements.
 
 ## Approach
 
-Our approach involves generating an extensive set of features with financial significance—up to 200 for various experiments. These include imbalances, price differentials, statistics on prices and sizes, discrete derivatives, and rolling averages.
+Our approach involves generating an extensive set of features with financial significance. These include imbalances, price differentials, statistics on prices and sizes, discrete derivatives, and rolling averages.
 
 Due to the manageable size of features, our primary models are gradient boosting trees, utilizing robust libraries like XGBoost, CatBoost, and LightGBM. We have found that the models' sensitivity to hyperparameters like learning rates is minimal, with significant improvements in model performance after feature augmentation.
 
@@ -22,7 +24,7 @@ Due to the manageable size of features, our primary models are gradient boosting
 
 Our experiments led to various findings:
 
-- Enhanced feature engineering, such as the inclusion of discrete derivatives of prices and sizes, significantly improved model accuracy.
+- Enhanced feature engineering, significantly improved model accuracy.
 - XGBoost models were faster but generally exhibited higher loss compared to CatBoost models, which performed better in noisy data conditions.
 - An ensemble approach, combining CatBoost and XGBoost, yielded the best results.
 
@@ -37,18 +39,6 @@ Our experiments led to various findings:
 | XGBoost                         | 128           | 0.05          | 5.986           | -               |
 | XGBoost                         | 138           | 0.05          | 5.986           | -               |
 | Ensemble (0.7×CatBoost+0.3×XGB) | 138           | 0.005, 0.05   | 5.90            | 5.53            |
-
-## How to Use
-
-Details on how to use the API and run the models will be provided, including installation steps, configuration, and execution instructions.
-
-## Contributing
-
-Contributions to this project are welcome. Please submit pull requests or raise issues as needed.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
 ## Acknowledgements
 
