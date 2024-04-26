@@ -36,8 +36,8 @@ Our experiments led to various findings:
 | CatBoost                        | 106           | 0.05          | 5.86            | 6.21            |
 | CatBoost                        | 128           | 0.005         | 5.89            | 5.58            |
 | CatBoost                        | 138           | 0.005         | 5.89            | 5.60            |
-| XGBoost                         | 128           | 0.05          | 5.986           | -               |
-| XGBoost                         | 138           | 0.05          | 5.986           | -               |
+| XGBoost                         | 128           | 0.05          | 5.986           | 5.60            |
+| XGBoost                         | 138           | 0.05          | 5.986           | 5.60            |
 | Ensemble (0.7×CatBoost+0.3×XGB) | 138           | 0.005, 0.05   | 5.90            | 5.53            |
 
 ## Acknowledgements
